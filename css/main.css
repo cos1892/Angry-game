@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.play-area {
+    width: 1080px;
+    height: 540px;
+    margin: 30px auto;
+    overflow: hidden;
+    background: url('../img/full-bg-day.png') repeat;
+    background-size: cover;
+    position: relative;
+    animation: move-bg 5s linear infinite;
+    color: #54331d;
+    font-weight: bold;
+}
+
+.statistics {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.health {
+    color: red;
+    font-size: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.health > span {
+    font-size: 30px;
+    color: #54331d;
+}
+
+@keyframes move-bg {
+    from {
+        background-position-x: 0;
+    }
+
+    to {
+        background-position-x: -1080px;
+    }
+}
+
+.angry-bird {
+    width: 105px;
+    height: 68px;
+    background: url('../img/birds_and_pigs.png') no-repeat;
+    background-position: -887px -729px;
+    position: absolute;
+    left: 30px;
+    top: 235px;
+    animation: move-bird 160ms steps(2) infinite;
+}
+
+@keyframes move-bird {
+    from {
+        background-position: -887px -729px;
+    }
+
+    to {
+        background-position: -670px -730px;
+    }
+}
+
+.undead {
+    animation: undead 300ms linear infinite;
+}
+
+@keyframes undead {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.stone {
+   width: 40px;
+   height: 30px;
+   background: url('../img/birds_and_pigs.png') no-repeat;
+   background-position: -2px -580px;
+   position: absolute;
+}
+
+.pig {
+    width: 102px;
+    height: 96px;
+    background: url('../img/birds_and_pigs.png') no-repeat;
+    background-position: -282px -296px;
+    position: absolute;
+    animation: move-pig 400ms steps(4) infinite alternate;
+}
+
+@keyframes move-pig {
+    from {
+        background-position-x: -282px;
+    }
+
+    to {
+        background-position-x: -690px;
+    }
+}
+
+.explosion {
+    width: 125px;
+    height: 119px;
+    background: url('../img/birds_and_pigs.png') no-repeat;
+    background-position: -40px -474px;
+    position: absolute;
+    animation: move-explosion 300ms infinite step-end;
+}
+
+@keyframes move-explosion {
+    from {
+        background-position-y: -831px;
+    }
+    
+    25% {
+        background-position-y: -712px;
+    }
+
+    50% {
+        background-position-y: -474px;
+    }
+
+    75% {
+        background-position-y: -593px;
+    }
+
+    to {
+        background-position-y: -355px;
+    }
+}
+
+.start-game {
+    width: 500px;
+    margin: 170px auto;
+}
+
+.start-game h3 {
+    font-size: 20px;
+    font-family: sans-serif;
+    font-style: italic;
+    color: #54331d;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.game-over {
+    display: none;
+    width: 300px;
+    margin: 200px auto;
+}
+
+.game-over h3 {
+    font-size: 40px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: #a71e1e;
+    text-align: center;
+}
+
+.button {
+    display: block;
+    width: 200px;
+    height: 40px;
+    padding: 5px;
+    margin: 0 auto;
+    border-radius: 15px;
+    background: #58c52e;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    -webkit-transition: background .4s;
+    -o-transition: background .4s;
+    transition: background .4s;
+}
+
+.button:hover {
+    background: green;
+}

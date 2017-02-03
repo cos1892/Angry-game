@@ -1,1 +1,0 @@
-The game is written using JavaScript and CSS animations. In this game the main character is a bird. Your task is to kill the pigs and not let them get behind you. Control the bird using the control arrows(up and down) and shoot using the space.
